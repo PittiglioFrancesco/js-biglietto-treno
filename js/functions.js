@@ -23,17 +23,20 @@ var costo = km * 0.21;
 
 if (age < 18) {
 
-    pSconto = Math.round(costo * 0.8);
+    pSconto = costo * 0.8;
+    pSconto = pSconto.toFixed(2)
     document.getElementById("risultato").innerHTML = "Il prezzo del biglietto è di " + costo + "€, ma dato che lei è un under 18 ha diritto ad uno sconto del 20% che le farà pagare il biglietto solo " + pSconto + "€."
 
 } else if (age > 65) {
 
-    pSconto = Math.round(costo * 0.6);
+    pSconto = Mcosto * 0.6;
+    pSconto = pSconto.toFixed(2)
     document.getElementById("risultato").innerHTML = "Il prezzo del biglietto è di " + costo + "€, ma dato che lei è un over 65 ha diritto ad uno sconto del 40% che le farà pagare il biglietto solo " + pSconto + "€."
 
 
 } else {
 
+    pSconto = pSconto.toFixed(2)
     document.getElementById("risultato").innerHTML = "Il prezzo del biglietto è di " + costo + "€.";
 
 }
